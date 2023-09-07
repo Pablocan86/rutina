@@ -88,3 +88,35 @@ div a img {
   height: 50px;
   margin-right: 10px;
 }
+
+@media (min-width: 700px) and (max-width: 1173px) {
+  body .section1 {
+    display: grid;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-rows: repeat(2 1fr);
+    grid-template-areas:
+      "art1 art1 art2 art2"
+      " . art3 art3 .";
+  }
+
+  body .section1 .article1-section1 {
+    grid-area: art1;
+  }
+
+  body .section1 .article2-section1 {
+    grid-area: art2;
+  }
+
+  body .section1 .article3-section1 {
+    grid-area: art3;
+  }
+}
+
+@media (min-width: 1174px) and (max-width: 3000px) {
+  body .section1 {
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "art1 art2 art2";
+  }
+}
